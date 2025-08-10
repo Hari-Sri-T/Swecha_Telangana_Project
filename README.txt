@@ -1,99 +1,169 @@
-Noto Sans Telugu Variable Font
-==============================
+---
+sdk: docker
+app\_file: src/streamlit\_app.py
+--------------------------------
 
-This download contains Noto Sans Telugu as both a variable font and static fonts.
+### Project running in Hugging Space LInk: https://huggingface.co/spaces/Harisri/Viswamai-Project-HeritageVerse
 
-Noto Sans Telugu is a variable font with these axes:
-  wdth
-  wght
+#  HeritageVerse: Share Your Cultural Stories
 
-This means all the styles are contained in a single file:
-  NotoSansTelugu-VariableFont_wdth,wght.ttf
+Welcome to **HeritageVerse** — a place to share your cultural stories, proverbs, or memories in **any language**.
+Our app detects the language, generates audio, and creates a beautiful story card — all saved **permanently** to MEGA cloud storage.
 
-If your app fully supports variable fonts, you can now pick intermediate styles
-that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Noto Sans Telugu:
-  static/NotoSansTelugu_ExtraCondensed-Thin.ttf
-  static/NotoSansTelugu_ExtraCondensed-ExtraLight.ttf
-  static/NotoSansTelugu_ExtraCondensed-Light.ttf
-  static/NotoSansTelugu_ExtraCondensed-Regular.ttf
-  static/NotoSansTelugu_ExtraCondensed-Medium.ttf
-  static/NotoSansTelugu_ExtraCondensed-SemiBold.ttf
-  static/NotoSansTelugu_ExtraCondensed-Bold.ttf
-  static/NotoSansTelugu_ExtraCondensed-ExtraBold.ttf
-  static/NotoSansTelugu_ExtraCondensed-Black.ttf
-  static/NotoSansTelugu_Condensed-Thin.ttf
-  static/NotoSansTelugu_Condensed-ExtraLight.ttf
-  static/NotoSansTelugu_Condensed-Light.ttf
-  static/NotoSansTelugu_Condensed-Regular.ttf
-  static/NotoSansTelugu_Condensed-Medium.ttf
-  static/NotoSansTelugu_Condensed-SemiBold.ttf
-  static/NotoSansTelugu_Condensed-Bold.ttf
-  static/NotoSansTelugu_Condensed-ExtraBold.ttf
-  static/NotoSansTelugu_Condensed-Black.ttf
-  static/NotoSansTelugu_SemiCondensed-Thin.ttf
-  static/NotoSansTelugu_SemiCondensed-ExtraLight.ttf
-  static/NotoSansTelugu_SemiCondensed-Light.ttf
-  static/NotoSansTelugu_SemiCondensed-Regular.ttf
-  static/NotoSansTelugu_SemiCondensed-Medium.ttf
-  static/NotoSansTelugu_SemiCondensed-SemiBold.ttf
-  static/NotoSansTelugu_SemiCondensed-Bold.ttf
-  static/NotoSansTelugu_SemiCondensed-ExtraBold.ttf
-  static/NotoSansTelugu_SemiCondensed-Black.ttf
-  static/NotoSansTelugu-Thin.ttf
-  static/NotoSansTelugu-ExtraLight.ttf
-  static/NotoSansTelugu-Light.ttf
-  static/NotoSansTelugu-Regular.ttf
-  static/NotoSansTelugu-Medium.ttf
-  static/NotoSansTelugu-SemiBold.ttf
-  static/NotoSansTelugu-Bold.ttf
-  static/NotoSansTelugu-ExtraBold.ttf
-  static/NotoSansTelugu-Black.ttf
+---
 
-Get started
------------
+##  Features
 
-1. Install the font files you want to use
+* ** Multilingual** — Share stories in any language with **automatic language detection**.
+* ** Audio Generation** — Converts your story to audio using **gTTS**.
+* ** Stylish Story Cards** — Generates beautiful images with **Noto Sans Telugu** font.
+* ** Persistent Storage** — All files (audio, cards, and metadata) are uploaded to **MEGA**.
+* ** Download Everything** — Get your audio and cards instantly after creation.
 
-2. Use your app's font picker to view the font family and all the
-available styles
+---
 
-Learn more about variable fonts
--------------------------------
+## 🗂️ Project Structure
 
-  https://developers.google.com/web/fundamentals/design-and-ux/typography/variable-fonts
-  https://variablefonts.typenetwork.com
-  https://medium.com/variable-fonts
+```
+.
+├── requirements.txt
+├── Dockerfile
+├── README.md
+└── src/
+    ├── streamlit_app.py
+    └── NotoSansTelugu-VariableFont_wdth,wght.ttf
+```
 
-In desktop apps
+* All app code and the font reside in **`src/`**.
+* Temporary files are handled in **`/tmp`** for deployment compatibility.
 
-  https://theblog.adobe.com/can-variable-fonts-illustrator-cc
-  https://helpx.adobe.com/nz/photoshop/using/fonts.html#variable_fonts
+---
 
-Online
+##  Deployment (Docker & Hugging Face Spaces)
 
-  https://developers.google.com/fonts/docs/getting_started
-  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide
-  https://developer.microsoft.com/en-us/microsoft-edge/testdrive/demos/variable-fonts
+This project uses **Docker** for universal deployment — locally and on **Hugging Face Spaces**.
 
-Installing fonts
+### 1️ Prerequisites
 
-  MacOS: https://support.apple.com/en-us/HT201749
-  Linux: https://www.google.com/search?q=how+to+install+a+font+on+gnu%2Blinux
-  Windows: https://support.microsoft.com/en-us/help/314960/how-to-install-or-remove-a-font-in-windows
+* [Python 3.9+](https://www.python.org/)
+* [Docker](https://www.docker.com/) for local builds
+* A **free MEGA.nz** account (for persistent cloud storage)
 
-Android Apps
+---
 
-  https://developers.google.com/fonts/docs/android
-  https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts
+### 2️ Environment Variables (Secrets)
 
-License
--------
-Please read the full license text (OFL.txt) to understand the permissions,
-restrictions and requirements for usage, redistribution, and modification.
+Set these in your environment **or** in your Hugging Face Space Secrets:
 
-You can use them in your products & projects – print or digital,
-commercial or otherwise.
+| Variable        | Description                |
+| --------------- | -------------------------- |
+| `MEGA_EMAIL`    | Your MEGA account email    |
+| `MEGA_PASSWORD` | Your MEGA account password |
 
-This isn't legal advice, please consider consulting a lawyer and see the full
-license for all details.
+> ⚠️ Never commit credentials to source control. Always use environment variables or CI/Space secrets.
+
+---
+
+### 3️ Local Docker Build & Run
+
+**Build the container:**
+
+```bash
+docker build -t heritageverse .
+```
+
+**Run it** (replace with your MEGA credentials):
+
+```bash
+docker run -p 8501:8501 \
+  -e MEGA_EMAIL=your@email.com \
+  -e MEGA_PASSWORD=yourpassword \
+  heritageverse
+```
+
+Then open **[http://localhost:8501](http://localhost:8501)** in your browser.
+
+---
+
+### 4️ Deploy on Hugging Face Spaces
+
+1. Create a new Space and **select `Docker`** as the SDK.
+2. Push your repository to the Space (or link the repo from GitHub).
+3. In the Space settings, add the secrets `MEGA_EMAIL` and `MEGA_PASSWORD`.
+4. Verify that `app_file` is set to `src/streamlit_app.py` (the metadata block at the top of this README helps with that).
+
+---
+
+##  Font Configuration
+
+* The file **`NotoSansTelugu-VariableFont_wdth,wght.ttf`** must be present in **`src/`**.
+* The filename must match **exactly** (case-sensitive).
+* Re-download if needed:
+  [Noto Sans Telugu Variable Font — GitHub](https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansTelugu/NotoSansTelugu-VariableFont_wdth,wght.ttf)
+
+---
+
+##  Requirements
+
+Add the following to `requirements.txt` or your environment file:
+
+```
+streamlit
+pillow
+langdetect
+langcodes
+gtts
+mega.py
+```
+
+> If you pin versions for reproducibility, list them here (e.g. `streamlit==1.21.0`).
+
+---
+
+##  Usage
+
+1. Open the **HeritageVerse** app.
+2. Enter your name *(optional)* and your cultural story, proverb, or memory.
+3. Submit to **generate audio** (gTTS) and a **story card** (image with Noto Sans Telugu rendering).
+4. Download your audio or card, or view previous submissions *(if implemented)*.
+
+---
+
+##  Troubleshooting
+
+### **Font Not Loading**
+
+* Ensure the font file exists at `src/NotoSansTelugu-VariableFont_wdth,wght.ttf` and is spelled exactly.
+
+### **MEGA Errors**
+
+* Confirm `MEGA_EMAIL` and `MEGA_PASSWORD` are set correctly as environment variables or Space secrets.
+* Check that your MEGA account is active and not locked by login attempts.
+
+### **Permissions or File Errors**
+
+* The app writes temp files to `/tmp` — ensure the Docker container or Space allows writing to `/tmp` (usually allowed).
+
+---
+
+## Security Tips
+
+* Do not log or print secrets in application logs.
+* Use scoped/temporary credentials if possible.
+* Consider rotating your MEGA password if it’s been committed anywhere.
+
+---
+
+##  License
+
+MIT License
+
+Font © Google (Noto Sans Telugu)
+
+---
+
+##  Contact / Issues
+
+If you find bugs or want features, please open an issue or contact the maintainer (add your preferred contact method here).
+
+> *Built for HeritageVerse, 2025 *
