@@ -1,16 +1,16 @@
 ---
 sdk: docker
-app\_file: src/streamlit\_app.py
+app\_file: src/app.py
+---
 --------------------------------
 
-### Project running in Hugging Space LInk: https://huggingface.co/spaces/Harisri/Viswamai-Project-HeritageVerse
+### Project running in Hugging Space Link: https://huggingface.co/spaces/Harisri/Viswamai-Project-HeritageVerse
 
 #  HeritageVerse: Share Your Cultural Stories
 
 Welcome to **HeritageVerse** — a place to share your cultural stories, proverbs, or memories in **any language**.
 Our app detects the language, generates audio, and creates a beautiful story card — all saved **permanently** to MEGA cloud storage.
 
----
 
 ##  Features
 
@@ -20,7 +20,7 @@ Our app detects the language, generates audio, and creates a beautiful story car
 * ** Persistent Storage** — All files (audio, cards, and metadata) are uploaded to **MEGA**.
 * ** Download Everything** — Get your audio and cards instantly after creation.
 
----
+
 
 ## 🗂️ Project Structure
 
