@@ -1,0 +1,5 @@
+streamlit>=1.28.0
+Pillow>=10.0.0
+langdetect>=1.0.9
+langcodes>=3.3.0
+gTTS>=2.3.2 
