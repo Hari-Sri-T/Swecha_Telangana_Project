@@ -7,7 +7,7 @@
   - Tanniru Hari Sri Shanmukha Sai
   - Sai Pranay Reddy Damarapalli
   - Phaneendra Gullapelli 
-  - ( Write the last persons name)
+  - Hridya Sharma
 - **Repository:** [Swecha_Telangana_Project](https://github.com/Hari-Sri-T/Swecha_Telangana_Project)  
 
 ---
