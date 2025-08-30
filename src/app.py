@@ -9,9 +9,11 @@ import json
 from langdetect import detect, DetectorFactory
 from gtts import gTTS
 
-# Find this script's folder and the font there
+
+# Find this script's folder and the font there 
 this_dir = os.path.dirname(os.path.abspath(__file__))
 font_path = os.path.join(this_dir, "NotoSansTelugu-VariableFont_wdth,wght.ttf")
+
 
 # MEGA login
 mega = Mega()
@@ -21,7 +23,9 @@ if not MEGA_EMAIL or not MEGA_PASSWORD:
     st.error("MEGA credentials missing. Set MEGA_EMAIL and MEGA_PASSWORD env vars.")
     st.stop()
 
+
 m = mega.login(MEGA_EMAIL, MEGA_PASSWORD)
+
 
 def upload_to_mega(filepath):
     file = m.upload(filepath)
